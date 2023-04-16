@@ -3,7 +3,7 @@ const product = [
        id: 0,
        image: 'image/gg-1.jpg',
        title: 'Absolut Vodka',
-       price: 30019,
+       price: 3019,
    },
    {
        id: 1,
