@@ -1,27 +1,27 @@
 const product = [
    {
        id: 0,
-       image: 'image/gg-1.jpg',
-       title: 'Absolut Vodka',
-       price: 3019,
+       imagen: 'imagen/gg-1.jpg',
+       titulo: 'Absolut Vodka',
+       precio: 3019,
    },
    {
        id: 1,
-       image: 'image/hh-2.jpg',
-       title: 'Jack Daniels',
-       price: 9606,
+       imagen: 'imagen/hh-2.jpg',
+       titulo: 'Jack Daniels',
+       precio: 9606,
    },
    {
        id: 2,
-       image: 'image/ee-3.jpg',
-       title: 'Bombay Sapphire ',
-       price: 6000,
+       imagen: 'imagen/ee-3.jpg',
+       titulo: 'Bombay Sapphire ',
+       precio: 6000,
    },
    {
        id: 3,
-       image: 'image/aa-1.jpg',
-       title: 'Tanqueray',
-       price: 5994,
+       imagen: 'imagen/aa-1.jpg',
+       titulo: 'Tanqueray',
+       precio: 5994,
    }
 ];
 const categories = [...new Set(product.map((item)=>
@@ -29,15 +29,15 @@ const categories = [...new Set(product.map((item)=>
    let i=0;
 document.getElementById('root').innerHTML = categories.map((item)=>
 {
-   var {image, title, price} = item;
+   var {imagen, titulo, precio} = item;
    return(
        `<div class='box'>
            <div class='img-box'>
-               <img class='images' src=${image}></img>
+               <img class='images' src=${imagen}></img>
            </div>
        <div class='bottom'>
-       <p>${title}</p>
-       <h2>$ ${price}.00</h2>`+
+       <p>${titulo}</p>
+       <h2>$ ${precio}.00</h2>`+
        "<button onclick='addtocart("+(i++)+")'>Agregar al carrito</button>"+
        `</div>
        </div>`
@@ -65,16 +65,16 @@ function displaycart(){
    else{
        document.getElementById("cartItem").innerHTML = cart.map((items)=>
        {
-           var {image, title, price} = items;
-           total=total+price;
+           var {imagen, titulo, precio} = items;
+           total=total+precio;
            document.getElementById("total").innerHTML = "$ "+total+".00";
            return(
                `<div class='cart-item'>
                <div class='row-img'>
-                   <img class='rowimg' src=${image}>
+                   <img class='rowimg' src=${imagen}>
                </div>
-               <p style='font-size:12px;'>${title}</p>
-               <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
+               <p style='font-size:12px;'>${titulo}</p>
+               <h2 style='font-size: 15px;'>$ ${precio}.00</h2>`+
                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
            );
        }).join('');
