@@ -21,7 +21,7 @@ let agregadoCarrito = "Tu carrito:\n";
 for (let i = 0; i < carrito.length; i++) {
     agregadoCarrito += carrito[i].item + " - $" + carrito[i].precio.toFixed(2) + "\n";
 }
-agregadoCarrito += "Total cost: $" + total.toFixed(2);
+agregadoCarrito += "Total: $" + total.toFixed(2);
 
 console.log(agregadoCarrito);
 alert(agregadoCarrito);
