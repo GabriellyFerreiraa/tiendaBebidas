@@ -1,4 +1,4 @@
-var shoppingCart = [];
+var carritoCompra = [];
 
 function Product(nombre, precio) {
   this.name = nombre;
