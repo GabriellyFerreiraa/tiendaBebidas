@@ -1,43 +1,43 @@
-var carritoCompra = [];
+var carrito = [];
 
 function Product(nombre, precio) {
-  this.name = nombre;
-  this.price = precio;
+  this.nombre = nombre;
+  this.precio = precio;
 }
 
 function displayCarritoCompra() {
-  var cartString = "Carrito :\n";
+  var carritoString = "Carrito :\n";
 
   for (var i = 0; i < carrito.length; i++) {
-    cartString += (i + 1) + ". " + carrito[i].name + " - $" + carrito[i].price.toFixed(2) + "\n";
+    carritoString += (i + 1) + ". " + carrito[i].nombre + " - $" + carrito[i].precio.toFixed(2) + "\n";
   }
 
   if (carrito.length === 0) {
-    cartString += "Tu carrito esta vacio.";
+    carritoString += "Tu carrito esta vacio.";
   }
 
-  alert(cartString);
+  alert(carritoString);
 }
 
 function addCarrito() {
   var productoNombre = prompt("Ingrese el nombre del producto: ");
   var productoPrecio = parseFloat(prompt("Ingrese el precio del producto: "));
 
-  var producto = new Product(productoNombre, productoPrecio);
+  var product = new Product(productoNombre, productoPrecio);
 
-  carrito.push(producto);
+  carrito.push(product);
 
   alert("Producto agregado al carrito.");
 }
 
-function removerProducto() {
-  var productoIndex = parseInt(prompt("Ingrese el producto que queres remover: ")) - 1;
+function removerCarrito() {
+  var productoIndex = parseInt(prompt("Ingrese la posicion del producto que queres remover: ")) - 1;
 
   if (productoIndex >= 0 && productoIndex < carrito.length) {
-    carrito.splice(producotIndex, 1);
-    alert("Producto removido.");
+    carrito.splice(productoIndex, 1);
+    alert("Producto removido del carrito.");
   } else {
-    alert("Producto invalido.");
+    alert("Numero del producto no válido.");
   }
 }
 
@@ -45,19 +45,19 @@ function calculateTotalPrecio() {
   var totalPrecio = 0;
 
   for (var i = 0; i < carrito.length; i++) {
-    totalPrecio += carrito[i].price;
+    totalPrecio += carrito[i].precio;
   }
 
-  alert("Total precio: $" + totalPrecio.toFixed(2));
+  alert("Total price: $" + totalPrecio.toFixed(2));
 }
 
 while (true) {
-  var choice = prompt("Seleccione una opcion:\n1. Add un producto en el carrito\n2. Remover un producto del carrito\n3. Ver el carrito\n4. Calcular el precio\n5. Salir");
+  var choice = prompt("Elige una opcion:\n1. Add el producto en el carrito\n2. Remover el producto del carrito\n3. Ver productos del carrito\n4. Calcular precio total\n5. Exit");
 
   if (choice === "1") {
     addCarrito();
   } else if (choice === "2") {
-    removerProducto();
+    removerCarrito();
   } else if (choice === "3") {
     displayCarritoCompra();
   } else if (choice === "4") {
