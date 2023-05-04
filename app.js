@@ -1,27 +1,70 @@
-let carrito = []; 
+var shoppingCart = [];
 
-// Solicitar al usuario que ingrese productos y precios hasta que escriba "finalizar" para finalizar el proceso.
-while (true) {
-  let item = prompt("Ingrese algun producto (o escriba 'finalizar' para finalizar):");
-  if (item === "finalizar") {
-    break;
+function Product(nombre, precio) {
+  this.name = nombre;
+  this.price = precio;
+}
+
+function displayCarritoCompra() {
+  var cartString = "Carrito :\n";
+
+  for (var i = 0; i < carrito.length; i++) {
+    cartString += (i + 1) + ". " + carrito[i].name + " - $" + carrito[i].price.toFixed(2) + "\n";
   }
-  let precio = parseFloat(prompt("Ingrese el precio de " + item + ":")); 
-  carrito.push({ item: item, precio: precio });
+
+  if (carrito.length === 0) {
+    cartString += "Your cart is empty.";
+  }
+
+  alert(cartString);
 }
 
-// Calcular el costo total de los productos en el carrito de compras
-let total = 0;
-for (let i = 0; i < carrito.length; i++) {
-  total += carrito[i].precio;
+function addCarrito() {
+  var productoNombre = prompt("Ingrese el nombre del producto: ");
+  var productoPrecio = parseFloat(prompt("Ingrese el precio del producto: "));
+
+  var producto = new Product(productoNombre, productoPrecio);
+
+  carrito.push(producto);
+
+  alert("Producto agregado al carrito.");
 }
 
-// Mostrar el carrito de compras y el costo total
-let agregadoCarrito = "Tu carrito:\n";
-for (let i = 0; i < carrito.length; i++) {
-    agregadoCarrito += carrito[i].item + " - $" + carrito[i].precio.toFixed(2) + "\n";
-}
-agregadoCarrito += "Total: $" + total.toFixed(2);
+function removerProducto() {
+  var productoIndex = parseInt(prompt("Ingrese el producto que queres remover: ")) - 1;
 
-console.log(agregadoCarrito);
-alert(agregadoCarrito);
+  if (productoIndex >= 0 && productoIndex < carrito.length) {
+    carrito.splice(producotIndex, 1);
+    alert("Producto removido.");
+  } else {
+    alert("Producto invalido.");
+  }
+}
+
+function calculateTotalPrecio() {
+  var totalPrecio = 0;
+
+  for (var i = 0; i < carrito.length; i++) {
+    totalPrecio += carrito[i].price;
+  }
+
+  alert("Total precio: $" + totalPrecio.toFixed(2));
+}
+
+while (true) {
+  var choice = prompt("Elija una opcion:\n1. Add un producto en el carrito\n2. Remover un producto del carrito\n3. Ver el carrito\n4. Calcular el precio\n5. Salir");
+
+  if (choice === "1") {
+    addCarrito();
+  } else if (choice === "2") {
+    removerProducto();
+  } else if (choice === "3") {
+    displayCarritoCompra();
+  } else if (choice === "4") {
+    calculateTotalPrecio();
+  } else if (choice === "5") {
+    break;
+  } else {
+    alert("Elección no válida. Inténtalo de nuevo.");
+  }
+}
