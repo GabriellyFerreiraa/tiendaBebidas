@@ -13,7 +13,7 @@ function displayCarritoCompra() {
   }
 
   if (carrito.length === 0) {
-    cartString += "Your cart is empty.";
+    cartString += "Tu carrito esta vacio.";
   }
 
   alert(cartString);
@@ -52,7 +52,7 @@ function calculateTotalPrecio() {
 }
 
 while (true) {
-  var choice = prompt("Elija una opcion:\n1. Add un producto en el carrito\n2. Remover un producto del carrito\n3. Ver el carrito\n4. Calcular el precio\n5. Salir");
+  var choice = prompt("Seleccione una opcion:\n1. Add un producto en el carrito\n2. Remover un producto del carrito\n3. Ver el carrito\n4. Calcular el precio\n5. Salir");
 
   if (choice === "1") {
     addCarrito();
