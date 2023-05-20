@@ -1,0 +1,56 @@
+[
+    {
+        "precio": 12500,
+        "id": 1,
+        "title": "Bombay 750ml",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/411-ead9f08ec196bf105216262017965175-480-0.png"
+    },
+    {
+        "precio": 8500,
+        "id": 2,
+        "title": "Beefeater",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/711-2e65c42ba2c2e36b4b16262016385406-640-0.png"
+    },
+    {
+        "precio": 2200,
+        "id": 3,
+        "title": "Alamos",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/alamos-cabernet1-0b563696c5aac1115a16796678311014-640-0.webp"
+    },
+    {
+        "precio": 1600,
+        "id": 4,
+        "title": "Chacabuco CheinDulce",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/diseno-sin-titulo-801-93e8209ad5dbc324d416478784763373-640-0.png"
+    },
+    {
+        "precio": 1600,
+        "id": 5,
+        "title": "Absolut Vodka 750ml",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/jim-beam-vainilla-411-da736639ae7bb6a86116309748714751-640-0.png"
+    },
+    {
+        "precio": 2100,
+        "id": 6,
+        "title": "Andes Rubia Pack lata 473ml",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/fotos-bebidas-241-f2d63bebe2d1e2663016312240500052-640-0.png"
+    },
+    {
+        "precio": 7950,
+        "id": 7,
+        "title": "Baileys 750ml",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/baileys-caramel1-6bf9e9a61eb08b0e7716845453069412-640-0.webp"
+    },
+    {
+        "precio": 4800,
+        "id": 8,
+        "title": "Ron Havana",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/aperitivo-141-dda05aab711559a39016336097792269-640-0.png"
+    },
+    {
+        "precio": 9840,
+        "id": 9,
+        "title": "Jose Cuervo",
+        "thumbnailUrl": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/448/812/products/jose-cuervo-reposado1-1963707c870a7cfb7816125482621847-640-0.png"
+    }
+]
