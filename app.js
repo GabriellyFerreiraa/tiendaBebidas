@@ -15,6 +15,7 @@ const fetchData = async () => {
 }
 
 const contendorProductos = document.querySelector('#contenedor-productos')
+
 const pintarProductos = (data) => {
   const template = document.querySelector('#template-productos').content
   const fragment = document.createDocumentFragment()
