@@ -150,3 +150,34 @@ const accionBotones = () => {
     })
   })
 }
+
+document.querySelector('.btn').addEventListener('click', function(btnEnviarPedido) {
+  btnEnviarPedido.preventDefault(); 
+  
+  const email = document.getElementById('inputEmail4').value;
+  const contraseña = document.getElementById('inputPassword4').value;
+  const ubicacion = document.getElementById('inputAddress').value;
+  const departamento = document.getElementById('inputAddress2').value;
+  const detallesDely = document.getElementById('inputCity').value;
+  const esAdulto = document.getElementById('gridCheck').checked;
+  
+  console.log('Email:', email);
+  console.log('Contraseña:', contraseña);
+  console.log('Ubicación:', ubicacion);
+  console.log('Departamento:', departamento);
+  console.log('Detalles de entrega:', detallesDely);
+  console.log('Es adulto:', esAdulto);
+
+
+  if (esAdulto) {
+    var message = "Detalles del pedido:"
+                  "\nEmail: " + email +
+                  "\nUbicación: " + ubicacion +
+                  "\nDepartamento: " + departamento +
+                  "\nDetalles de entrega: " + detallesDely;
+    alert(message);
+  } else {
+
+    alert("No sos mayor de edad.");
+  }
+});
