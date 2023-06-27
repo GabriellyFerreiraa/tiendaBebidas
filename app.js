@@ -173,9 +173,9 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarPedid
     Swal.fire({
       title: 'Confirmar pedido',
       text: "DETALLES DEL PEDIDO: " + 
-       ubicacion +
+       ubicacion + " " + 
        departamento +
-            "\nDetalles de entrega: " + detallesDely,
+            "  | Detalles de entrega: " + detallesDely,
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
