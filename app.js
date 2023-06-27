@@ -170,14 +170,32 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarPedid
 
 
   if (esAdulto) {
-    var message = "Detalles del pedido:"
-                  "\nEmail: " + email +
-                  "\nUbicación: " + ubicacion +
-                  "\nDepartamento: " + departamento +
-                  "\nDetalles de entrega: " + detallesDely;
-    alert(message);
+    Swal.fire({
+      title: 'Confirmar pedido',
+      text: "DETALLES DEL PEDIDO: " + 
+       ubicacion +
+       departamento +
+            "\nDetalles de entrega: " + detallesDely,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'CONFIRMADO!',
+          'Tu pedido esta en camino.',
+          'success'
+        )
+      }
+    })
   } else {
-
-    alert("No sos mayor de edad.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No sos mayor de edad!',
+      footer: '<a href="./index.html">Volver</a>'
+    })
   }
 });
