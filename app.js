@@ -179,8 +179,8 @@ const accionBotones = () => {
   })
 }
 
-document.querySelector('.btn').addEventListener('click', function(btnEnviarPedido) {
-  btnEnviarPedido.preventDefault(); 
+document.querySelector('.btn').addEventListener('click', function(btnEnviarFormulario) {
+  btnEnviarFormulario.preventDefault(); 
   
   const email = document.getElementById('inputEmail4').value;
   const contraseña = document.getElementById('inputPassword4').value;
