@@ -111,13 +111,41 @@ const pintarFooter = () => {
 
   footer.appendChild(fragment)
 
-
+  const finalizarPedido = document.querySelector('#finalizar-pedido')
+  finalizarPedido.addEventListener('click',async () => {
+    const { value: accept } = await Swal.fire({
+      title: 'Confirmar edad: ',
+      input: 'checkbox',
+      inputValue: 1,
+      inputPlaceholder:
+        'Soy mayor de edad.',
+      confirmButtonText:
+        'Confirmar pedido <i class="fa fa-arrow-right"></i>',
+      inputValidator: (result) => {
+        return !result && 'No sos mayor de edad, NO podes seguir comprando!'
+      }
+    })
+    
+    if (accept) {
+      const { value: text } = await Swal.fire({
+        input: 'textarea',
+        inputLabel: 'Por favor ingrese tu ubicación: (calle, altura, departamento)',
+        inputPlaceholder: 'Escriba tu ubicación aqui...',
+        inputAttributes: {
+          'aria-label': 'Escriba tu ubicación aqui'
+        },
+        showCancelButton: true
+      })
+      if (text) {
+        Swal.fire( 'Precio total: ' + nPrecio , 'Detalle de entrega: ' + text , 'success')
+      }
+    }
+  })
   const boton = document.querySelector('#vaciar-carrito')
   boton.addEventListener('click', () => {
     carrito = {}
     pintarCarrito()
   })
-
 }
 
 const accionBotones = () => {
