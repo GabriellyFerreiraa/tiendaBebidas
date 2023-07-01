@@ -143,3 +143,10 @@ select:hover {
 #finalizar-pedido {
     text-decoration: none;
 }
+
+.info-form {
+    background-color: white;
+    color: #333;
+    border-radius: 3px;
+    width: 510px;
+}

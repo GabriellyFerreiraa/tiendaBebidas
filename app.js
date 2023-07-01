@@ -104,7 +104,7 @@ const pintarFooter = () => {
  
 
   template.querySelectorAll('td')[0].textContent = nCantidad
-  template.querySelector('span').textContent = nPrecio
+  template.querySelector('span').textContent = nPrecio /* Precio total del pedido */
 
   const clone = template.cloneNode(true)
   fragment.appendChild(clone)
