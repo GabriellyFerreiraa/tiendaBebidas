@@ -189,6 +189,7 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarFormu
   const detallesDely = document.getElementById('inputCity').value;
   const esAdulto = document.getElementById('gridCheck').checked;
   
+  /* Monstrando datos colectados por consola:  */
   console.log('Email:', email);
   console.log('Contraseña:', contraseña);
   console.log('Ubicación:', ubicacion);
