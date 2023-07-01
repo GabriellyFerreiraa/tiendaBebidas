@@ -186,7 +186,7 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarFormu
   const contraseña = document.getElementById('inputPassword4').value;
   const ubicacion = document.getElementById('inputAddress').value;
   const departamento = document.getElementById('inputAddress2').value;
-  const detallesDely = document.getElementById('inputCity').value;
+  const telefono = document.getElementById('inputCity').value;
   const esAdulto = document.getElementById('gridCheck').checked;
   
   /* Monstrando datos colectados por consola:  */
@@ -194,7 +194,7 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarFormu
   console.log('Contraseña:', contraseña);
   console.log('Ubicación:', ubicacion);
   console.log('Departamento:', departamento);
-  console.log('Detalles de entrega:', detallesDely);
+  console.log('Teléfono:', telefono);
   console.log('Es adulto:', esAdulto);
 
 
@@ -204,7 +204,7 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarFormu
       text: "DETALLES DE CLIENTE: " + 
        ubicacion + " " + 
        departamento +
-            "  | Detalles de entrega: " + detallesDely,
+            "  | Teléfono: " + telefono,
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
