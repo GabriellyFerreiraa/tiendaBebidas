@@ -199,8 +199,8 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarPedid
 
   if (esAdulto) {
     Swal.fire({
-      title: 'Confirmar pedido',
-      text: "DETALLES DEL PEDIDO: " + 
+      title: 'Confirmar formulario de cliente',
+      text: "DETALLES DE CLIENTE: " + 
        ubicacion + " " + 
        departamento +
             "  | Detalles de entrega: " + detallesDely,
@@ -213,7 +213,7 @@ document.querySelector('.btn').addEventListener('click', function(btnEnviarPedid
       if (result.isConfirmed) {
         Swal.fire(
           'CONFIRMADO!',
-          'Tu pedido esta en camino.',
+          'Formulario de cliente completado.',
           'success'
         )
       }
